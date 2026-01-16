@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "../../axios";
-import requests from "../../requests";
+import axios from "../../utils/axios";
+import requests from "../../utils/requests";
 import "./banner.css";
 
 function Banner() {
@@ -10,7 +10,7 @@ function Banner() {
     (async () => {
       try {
         const request = await axios.get(requests.fetchNetflixOriginals);
-        console.log(request);
+        // console.log(request);
         setMovie(
           request.data.results[
             Math.floor(Math.random() * request.data.results.length)
