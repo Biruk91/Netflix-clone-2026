@@ -9,7 +9,7 @@
   background-color: transparent;
   height: 10vh;
   color: white;
-  transition:all 0.5s;
+  transition: all 0.5s;
   transition-timing-function: ease-in;
   z-index: 1;
   /* background-color: red; */
@@ -25,19 +25,41 @@
   /* background-color: yellow; */
 }
 .header_left ul {
-  width: 140%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
   cursor: pointer;
+  gap: 30px;
   /* background-color: lightblue; */
 }
 .header_right ul {
-  width: 150%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   list-style: none;
   cursor: pointer;
+  gap: 15px;
   /* background-color: lightgreen; */
+}
+
+/* Media query */
+@media (max-width: 576px) {
+  .header_left ul {
+    display: inline-block;
+    margin-top: 140px;
+  }
+}
+@media (max-width: 992px) {
+  .header_outer_container {
+    position: static;
+  }
+  .header_left ul {
+    display: inline-block;
+    margin-top: 140px;
+  }
+  .header_right ul {
+    gap: 60px;
+  }
 }
